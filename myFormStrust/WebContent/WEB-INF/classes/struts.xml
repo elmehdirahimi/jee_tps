@@ -10,6 +10,7 @@
 <action name="affichage"><result>affichage.jsp</result> </action>
 
 <action name="saveCompte" class="com.ensak.bean.Compte" method="CreerCompte">
+ 
 	<result name="success">affichage.jsp</result>
 	<result name="error">index.jsp</result>
 </action>
