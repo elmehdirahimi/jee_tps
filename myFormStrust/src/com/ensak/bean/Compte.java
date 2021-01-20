@@ -1,12 +1,13 @@
 package com.ensak.bean;
 
-public class Compte {
-	private String nom;
-	private String prenom;
-	private String courriel;
-	private String password;
-	
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
+import com.ensak.HibernateUtil;
+import com.ensak.dao.Client;
+
+public class Compte {
+	
 	
 	public Compte() {
 		super();
@@ -45,6 +46,14 @@ public class Compte {
 	}
 	
 	public String CreerCompte() {
+		
+		Session session = HibernateUtil.sessionFactory.openSession();
+		Transaction transaction=session.beginTransaction();		
+	
+		Client cl= new Client(1l, "mehdi", "tttt");
+		session.save(cl) ;
+		transaction.commit();
+		
 		return "success";
 	}
 	

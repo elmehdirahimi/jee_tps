@@ -12,3 +12,4 @@
         <mapping resource="./com/ensak/dao/Client.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>
+

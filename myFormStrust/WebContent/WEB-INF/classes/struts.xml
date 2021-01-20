@@ -7,16 +7,11 @@
 <package name="dafault" namespace="/" extends="struts-default">
 <default-action-ref name="index"></default-action-ref>
 <action name="index"><result>index.jsp</result> </action>
-<action name="compte"><result>Compte.jsp</result> </action>
-<action name="inscrire"><result>Inscrire.jsp</result> </action>
+<action name="affichage"><result>affichage.jsp</result> </action>
 
 <action name="saveCompte" class="com.ensak.bean.Compte" method="CreerCompte">
-	<result name="success">Confcompte.jsp</result>
-	<result name="error">Compte.jsp</result>
-</action>
-<action name="validerLaureat" class="com.ensak.bean.Laureat" method="ValiderLaureat">
-	<result name="success">Confscript.jsp</result> 
-	<result name="error">Inscrire.jsp</result>
+	<result name="success">affichage.jsp</result>
+	<result name="error">index.jsp</result>
 </action>
 </package>
 </struts>
